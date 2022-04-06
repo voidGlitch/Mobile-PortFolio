@@ -13,13 +13,57 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         {/* <Stack.Screen name="home" component={Home} /> */}
-        <Stack.Screen name="Home">
+        <Stack.Screen
+          name="Home"
+          options={{
+            headerShown: false,
+          }}
+        >
           {(props) => <Home {...props} channelName={"VoidGlich Codes"} />}
         </Stack.Screen>
-        <Stack.Screen name="Contact" component={Contact} />
-        <Stack.Screen name="About" component={About} />
-        <Stack.Screen name="UserData" component={UserData} />
-        <Stack.Screen name="Course" component={Course} />
+        <Stack.Screen
+          name="Contact"
+          component={Contact}
+          options={{
+            headerTitleAlign: "center",
+            headerStyle: {
+              fontSize: 25,
+            },
+            headerTitle: "Contacts",
+          }}
+        />
+        <Stack.Screen
+          name="About"
+          component={About}
+          options={{
+            headerTitleAlign: "center",
+            headerStyle: {
+              fontSize: 25,
+            },
+          }}
+        />
+        <Stack.Screen
+          name="UserData"
+          component={UserData}
+          options={{
+            headerTitleAlign: "center",
+            headerStyle: {
+              fontSize: 25,
+            },
+            headerTitle: "User",
+          }}
+        />
+        <Stack.Screen
+          name="Course"
+          component={Course}
+          options={{
+            headerTitleAlign: "center",
+            headerStyle: {
+              fontSize: 25,
+            },
+            headerTitle: "Courses",
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
